@@ -33,7 +33,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/theme.less",
+              "src/styles.scss",
+              "src/variables.scss"
             ],
             "scripts": []
           },

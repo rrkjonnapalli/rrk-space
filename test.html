@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RRK Space</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Headland+One&family=Pirata+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body,
+    div,
+    p,
+    span,
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      font-family: "Work Sans", sans-serif;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(237, 237, 237);
+      justify-content: center;
+    }
+
+    .title {
+      font-family: "Dela Gothic One", sans-serif;
+      width: 100%;
+      font-size: 64px;
+    }
+
+    .bg-white {
+      background-color: white !important;
+      color: black;
+    }
+
+    .bg-black {
+      background-color: black !important;
+      color: white;
+    }
+
+    .c1 {
+      width: 540px;
+      height: 640px;
+      align-self: flex-start;
+      align-content: flex-start;
+    }
+
+    .white-shadow {
+      text-shadow: 0px 1px 5px rgba(255, 255, 255, 1);
+    }
+
+    .black-shadow {
+      text-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
+    }
+
+    @media (max-width: 1080px) {
+      .exp-title-block {
+        display: none !important;
+      }
+    }
+
+    .sub-title {
+
+      height: 36px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 500;
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+    }
+
+    .exp-title-block {
+      width: 150px;
+      text-align: center;
+      height: 36px;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 500;
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+    }
+
+    .exp-position {
+      position: relative;
+      margin-left: auto;
+      right: -88px;
+      bottom: -104px;
+      width: 150px !important;
+      border-radius: 0;
+    }
+
+    .avatar {
+      display: flex;
+      width: 220px;
+      max-width: 220px;
+      min-height: 220px;
+      max-height: 220px;
+      border-radius: 50%;
+    }
+
+    .intro-block,
+    .showcase-block {
+      max-width: 250px;
+    }
+
+    .links {}
+
+    .c-btn {
+      padding-top: .25rem;
+      padding-bottom: .25rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
+      font-size: .75rem;
+      max-height: 30px;
+    }
+
+    .skill-block {
+      display: flex;
+      max-width: 400px;
+      flex-wrap: wrap;
+    }
+
+    .skills-group {
+      display: flex;
+      align-self: flex-start;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col c1 bg-black">
+        <h1 class="title white-shadow text-end">
+          R Ravikiran &nbsp;
+        </h1>
+        <!-- <span >
+        </span> -->
+        <div class="row">
+          <div class="col intro-block m-auto">
+            <ul>
+              <li> Senior Software Engineer (MEAN) at Cameo Global Hyderabad. </li>
+              <li>5+ Years of experience on MEAN stack technologies (Backend heavy).</li>
+              <li>Skilled in analyzing features, designing impactful solutions, and optimizing existing product
+                problems.</li>
+              <li> Excellent debugging skills for solving complex issues.</li>
+            </ul>
+          </div>
+          <div class="col showcase-block">
+            <div class="avatar bg-white mb-5 align-items-center">
+              <span class="justify-content-center">Ravi</span>
+            </div>
+            <div class="links justify-content-center">
+              <button type="button" class="btn btn-light c-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-linkedin">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                Linked In
+              </button>
+              <button type="button" class="btn btn-light ms-2 c-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-github">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+                Git
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="exp-title-block bg-white shadow-lg w-auto exp-position">
+          Experience
+        </div>
+      </div>
+      <div class="col c1 bg-white justify-content-start align-content-start">
+        <h1 class="title black-shadow">
+          Jonnapalli
+        </h1>
+
+        <div class="education-block">
+          <div class="sub-title bg-white">
+            <span>
+              Education
+            </span>
+          </div>
+          <div>
+            <span>Completed B.Tech(CS) in 2018 from IIIT(RGUKT) Nuzvid.</span>
+          </div>
+
+        </div>
+
+        <div class="skill-block">
+          <div class="sub-title bg-white">
+            <span> Skills </span>
+          </div>
+          <div class="grid gap-3 skills-group">
+            <button type="button" class="btn btn-light c-btn shadow">
+              Node.js
+            </button>
+            <button type="button" class="btn btn-light c-btn shadow">
+              Mongo DB
+            </button>
+            <button type="button" class="btn btn-light c-btn shadow">
+              Angular
+            </button>
+            <button type="button" class="btn btn-light c-btn shadow">
+              Express
+            </button>
+            <button type="button" class="btn btn-light c-btn shadow">
+              Kafka
+            </button>
+            <button type="button" class="btn btn-light c-btn shadow">
+              Web Development
+            </button>
+            <button type="button" class="btn btn-light c-btn shadow">
+              REST APIs
+            </button>
+            <button type="button" class="btn btn-light c-btn shadow">
+              Nifi
+            </button>
+            <button type="button" class="btn btn-light c-btn shadow">
+              Git
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col c1 bg-white"></div>
+      <div class="col c1 bg-black"></div>
+    </div>
+    <div class="row">
+      <div class="col c1 bg-black"></div>
+      <div class="col c1 bg-white"></div>
+    </div> -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

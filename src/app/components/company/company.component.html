@@ -1,0 +1,21 @@
+@if (item) {
+<div class="p-1" [ngClass]="tileStyle">
+  <h3 [ngClass]="textStyle">{{item.title}}</h3>
+  <h5 [ngClass]="textStyle">{{item.location}}</h5>
+  <h5 [ngClass]="textStyle">{{item.position}} ({{item.duration}})</h5>
+  @for (cItem of item.info; track $index) {
+  <p>{{ cItem }}</p>
+  }
+  @for (pItem of item.projects; track pItem.id) {
+  <h4 [ngClass]="textStyle">{{pItem.name}}</h4>
+  <p [ngClass]="textStyle">Tech - {{pItem.tech}}</p>
+  <ul class="">
+    @for (projectInfoItem of pItem.info; track $index) {
+    <li class="project-item">{{ projectInfoItem }}</li>
+    }
+  </ul>
+  }
+</div>
+} @else {
+<div class="no-data"></div>
+}

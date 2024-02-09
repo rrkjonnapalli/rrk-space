@@ -1,0 +1,45 @@
+$x: '-left', '-right';
+$y: '-top', '-bottom';
+// $all:  '-left', '-right', '-top', '-bottom';
+
+$type-list-map: (
+  't': '-top',
+  'r': '-right',
+  'b': '-bottom',
+  'l': '-left',
+  'x': $x,
+  'y': $y,
+  '': ''
+);
+
+$type-map: (
+  'p': 'padding',
+  'm': 'margin'
+);
+
+$wh-list: ('w': 'width','h':'height', 'wh': ('width', 'height'));
+
+@for $i from 1 through 100 {
+  @each $item, $prop-types in $wh-list{
+    .#{$item}-#{$i} {
+      @each $prop-type in $prop-types {
+        #{$prop-type}: $i * 1%;
+      }
+    }
+  }
+}
+
+@each $tc, $prop-type in $type-map {
+  // @debug $tc, $prop-type;
+  @for $i from 1 through 5 {
+    @each $item, $props in $type-list-map {
+      // @debug $item, $props;
+      .#{$tc}#{$item}-#{$i} {
+        @each $prop in $props {
+          #{$prop-type}#{$prop}: $i * 1rem;
+        }
+      }
+    }
+  }
+}
+

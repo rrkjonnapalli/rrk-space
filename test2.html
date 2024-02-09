@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      display: flex;
+      background: #c4c4c4;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+    }
+
+    .c0,
+    .c1,
+    .hb1 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .c0 {
+      max-width: 1024px;
+      max-height: 650px;
+      justify-content: center;
+    }
+
+    .c1 {
+      width: 512px;
+      height: 650px;
+    }
+
+    .hb1 {
+      width: 200px;
+      height: 80px;
+      position: relative;
+      top: -80px
+    }
+
+    @media (max-width: 513px) {
+      .c0,
+      .c1 {
+        width: 100%;
+        max-width: 100%;
+      }
+      .hb1 {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .with-hb {
+        margin-bottom: 650px;
+      }
+
+      .hb1 {
+        top: -730px;
+        background-color: white !important;
+      }
+    }
+
+    .bg-white {
+      background-color: white;
+      color: black;
+    }
+
+    .bg-black {
+      background-color: black;
+      color: white;
+    }
+
+    .after-hb {
+      margin-top: -80px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="c0">
+    <div class="c0 with-hb">
+      <div class="c1 bg-black"></div>
+      <div class="c1 bg-white"></div>
+    </div>
+    <div class="c0">
+      <div class="hb1 bg-white"></div>
+    </div>
+    <div class="c0 after-hb">
+      <div class="c1 bg-white"></div>
+      <div class="c1 bg-black"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>

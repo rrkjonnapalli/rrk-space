@@ -1,0 +1,22 @@
+@import "@stylevars";
+
+.text-black {
+  color: $black !important;
+}
+
+.text-white {
+  color: $white !important;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin-left: 10px;
+}
+
+p, .project-item {
+  font-size: 13px;
+}

@@ -1,0 +1,96 @@
+<div class="pg-style">
+  <div class="c0">
+
+    <div class="c0 with-sub-head">
+      <div class="c1 bg-black">
+        <div class="head-title w-100 text-right">{{title.firstname}} &nbsp;</div>
+        <div class="c2">
+          <ul class="intro-list w-100">
+            @for (item of introlist; track item.id) {
+            <li>
+              @if (item.bold) {
+              <b>{{item.text}}</b>
+              } @else {
+              {{item.text}}
+              }
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="c2 show-block">
+          <div class="avatar bg-white">
+            Ravi
+          </div>
+          <div class="links">
+            <button nz-button nzType="primary" class="link-btn" nzSize="small" (click)="gotoLink(linkedIn)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-linkedin">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              &nbsp; <b>Linked In</b>
+            </button>
+            <button nz-button nzType="primary" class="link-btn" nzSize="small" (click)="gotoLink(github)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-github">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+              </svg>
+              &nbsp; <b>Git</b>
+            </button>
+          </div>
+          <div class="w-100 info-block">
+            <ul class="intro-list list-none w-100">
+              @for(item of infolist; track item.id) {
+              <li>
+                {{item.text}}
+              </li>
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="c1 bg-white">
+        <div class="head-title left-head">{{title.lastname}}</div>
+
+        <div class="c3 ml-1 w-50  after-head">
+          <div class="sub-title">Skills</div>
+          <div class="skill-list">
+            @for (item of skills; track item.id) {
+            <div class="skill">
+              {{item.text}}
+            </div>
+            }
+          </div>
+        </div>
+        <div class="c3 mb-2 ml-1">
+          <div class="sub-title">Education</div>
+          @for (item of education; track item.id) {
+          <div class="education">
+            {{item.text}}
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+    <div class="c0">
+      <div class="sub-head-1 bg-white sub-title">
+        Experience
+      </div>
+    </div>
+    <div class="c0 after-sub-head">
+      @for (item of experiences; track ix; let ix = $index;) {
+      <div class="c1 exp-block align-content-center" [ngClass]="getStyle(ix)">
+        <app-company [company]="item" [tileStyle]="getStyle(ix)"></app-company>
+      </div>
+      }
+      <!-- <div class="c1 bg-black">
+      </div> -->
+    </div>
+  </div>
+
+</div>

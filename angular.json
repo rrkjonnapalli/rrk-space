@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/rrk-space",
+            "outputPath": "../dist/rrk-space",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -37,7 +37,9 @@
               "src/styles.scss",
               "src/variables.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/simple-peer/simplepeer.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -95,7 +97,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/theme.less",
+              "src/styles.scss",
+              "src/variables.scss"
             ],
             "scripts": []
           }

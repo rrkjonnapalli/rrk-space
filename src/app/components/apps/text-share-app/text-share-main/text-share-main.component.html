@@ -1,0 +1,39 @@
+<ng-container>
+  @if (roomID) {
+  <div class="ts-main-container d-flex">
+
+    <app-toolbar (action)="onToolbarAction($event)"></app-toolbar>
+
+    <nz-card class="ts-main" [nzBodyStyle]="cardBodyStyle" [nzBordered]="false">
+      <div class="msg-container" #msgContainer>
+        @for (msg of messages; track msg.id; let i = $index) {
+        <nz-card [nzBodyStyle]="msgBodyStyle" [nzBordered]="false" nz-tooltip nzTooltipPlacement="bottom"
+          [nzTooltipTitle]="getToolTipTitle(msg)">
+          <div class="avatar-space">
+            @if (msg.needAvatar) {
+            <nz-avatar [nzText]="msg.user" nzSize="small"></nz-avatar>
+            }
+          </div>
+          <span [innerHTML]="msg.text | sanitize"></span>
+        </nz-card>
+        }
+      </div>
+      <form class="msg-input-container" name="msgForm" (submit)="onSubmit()">
+        <div class="msg-box">
+          <app-cm-editor-input name="msg" [(ngModel)]="msg" class="overflow-auto w-100"
+            (editorSubmit)="onSubmit()"></app-cm-editor-input>
+        </div>
+        <!-- <div class="msg-box" id="msg-box" #msgBox></div> -->
+        <!-- <textarea autofocus nz-input placeholder="Message" id="msg-box" name="msg" [nzAutosize]="{ minRows: 3, maxRows: 5 }"
+            [(ngModel)]="msg" (keydown.control.enter)="onSubmit()" (keydown.meta.enter)="onSubmit()"></textarea> -->
+        <button nz-button nzType="primary" class="send-btn">
+          Send
+        </button>
+      </form>
+    </nz-card>
+
+  </div>
+  } @else {
+  <app-room-creator [roomType]="roomType"></app-room-creator>
+  }
+</ng-container>

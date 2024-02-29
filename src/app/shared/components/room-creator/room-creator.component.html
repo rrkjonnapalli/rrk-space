@@ -1,0 +1,13 @@
+<div class="wh-100 d-flex ts-home">
+  <form name="join-room-form" class="blocks" (submit)="joinRoom()">
+    <input nz-input placeholder="Enter Room ID" name="roomID" type="text" [(ngModel)]="roomID" class="room-input" />
+    <button nz-button nzType="primary" class="link-btn">
+      Join Room
+    </button>
+  </form>
+  <div class="blocks">
+    <button nz-button nzType="primary" class="link-btn" (click)="createRoom()">
+      Create A Room
+    </button>
+  </div>
+</div>

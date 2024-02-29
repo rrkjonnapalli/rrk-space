@@ -4,6 +4,7 @@ import { LucideAngularModule } from 'lucide-angular';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { CompanyComponent } from '../company/company.component';
 import * as _ from 'lodash';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -39,6 +40,7 @@ export class PortfolioComponent {
 
   linkedIn = 'https://www.linkedin.com/in/rrkjonnapalli';
   github = 'https://github.com/rrkjonnapalli';
+  myProjects = ['apps'];
 
   skills = [
     'Node.js',
@@ -175,7 +177,7 @@ export class PortfolioComponent {
   styles: any = [];
   isDesktop = true;
 
-  constructor() {
+  constructor(private router: Router) {
     this.styles = this.snake();
     if (window.innerWidth < 1023) {
       this.swithToMobile();
@@ -218,8 +220,11 @@ export class PortfolioComponent {
   ].map((text, i) => ({ text, id: i + 1, bold: i === 0 }));
 
 
-  gotoLink = (link: string) => {
-    window.open(link, '_blank');
+  gotoLink = (link: any, target = '_blank') => {
+    if (target === '_self') {
+      return this.router.navigate(link);
+    }
+    return window.open(link, target);
   }
 
   snake() {

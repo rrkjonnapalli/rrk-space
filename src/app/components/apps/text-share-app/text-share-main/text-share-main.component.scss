@@ -1,0 +1,75 @@
+@import '@stylevars';
+
+.ts-main-container {
+  background-color: $black-2;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.ts-main {
+  width: 60%;
+  height: 100%;
+}
+
+
+@media (max-width: ($small-screen)) {
+  .ts-main {
+    width: 100%;
+  }
+}
+
+.msg-container {
+  background-color: $black-5;
+  width: 100%;
+  height: 85% !important;
+  overflow: auto;
+}
+
+.msg-input-container {
+  background-color: $black-5;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.send-btn {
+  margin-top: 3px;
+  align-self: flex-end;
+}
+
+.empty-avatar {
+  width: 24px;
+  height: 24px;
+}
+
+.avatar-space {
+  margin-right: 3px;
+  width: 24px;
+  height: 24px;
+}
+
+.msg-text {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+
+
+.msg-box {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+

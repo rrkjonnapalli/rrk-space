@@ -42,6 +42,9 @@
               </svg>
               &nbsp; <b>Git</b>
             </button>
+            <button nz-button nzType="primary" class="link-btn" nzSize="small" (click)="gotoLink(myProjects, '_self')">
+              <b>Projects</b>
+            </button>
           </div>
           <div class="w-100 info-block">
             <ul class="intro-list list-none w-100">
@@ -88,8 +91,6 @@
         <app-company [company]="item" [tileStyle]="getStyle(ix)"></app-company>
       </div>
       }
-      <!-- <div class="c1 bg-black">
-      </div> -->
     </div>
   </div>
 

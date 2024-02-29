@@ -1,0 +1,9 @@
+<div class="app-board">
+  <div class="app-container">
+    @for (app of apps; track app.name) {
+    <div class="app" (click)="gotoApp(app)">
+      {{app.name}}
+    </div>
+    }
+  </div>
+</div>

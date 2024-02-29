@@ -1,0 +1,14 @@
+<ng-container>
+  @if (roomID && isRoomLoaded) {
+  <div class="rs-main-container">
+    <div>
+      {{roomID}}
+    </div>
+    <div>
+      <app-toolbar (action)="onToolbarAction($event)"></app-toolbar>
+    </div>
+  </div>
+  } @else {
+  <app-room-creator [roomType]="roomType"></app-room-creator>
+  }
+</ng-container>
